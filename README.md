@@ -9,4 +9,4 @@ https://jonasjf360.github.io/Texts_in_English/index.html
 
 Este é um projeto livre, e se sentir vontade você pode baixar e modificar os arquivos.
 
-Porém, tudo que fizer de alteração tem que se manter livre e grátis para não sofrer nenhum penalização.
+Porém, tudo que fizer de alteração tem que se manter livre e grátis para não sofrer nenhuma penalização.
