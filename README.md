@@ -4,3 +4,9 @@ Um lugar para você treinar o seu Inglês com histórias e áudios de nativos ou
 ## Para acessar ou ter mais INFORMAÇÕES clique no link abaixo.
 
 https://jonasjf360.github.io/Texts_in_English/index.html
+
+### Projeto livre:
+
+Este é um projeto livre, e se sentir vontade você pode baixar e modificar os arquivos.
+
+Porém, tudo que fizer de alteração tem que se manter livre e grátis para não sofrer nenhum penalização.
