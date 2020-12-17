@@ -7,6 +7,6 @@ https://jonasjf360.github.io/Texts_in_English/index.html
 
 ### Projeto livre:
 
-Este é um projeto livre, e se sentir vontade você pode baixar e modificar os arquivos.
+Este é um projeto livre, e se sentir vontade você pode criar uma ramificação ou até baixar os arquivos para modifica-los por motivo de estudos ou uso próprio.
 
 Porém, tudo que fizer de alteração tem que se manter livre e grátis para não sofrer nenhuma penalização.
