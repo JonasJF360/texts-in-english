@@ -3,7 +3,9 @@
 ## Texts In English
 
 <h1>O projeto:</h1>
-O projeto Texts in English(Textos em inglês) nada mais é do que um lugar para você exercitar o seu Inglês ou até mesmo para aprender caso ainda não saiba, com o auxilio de histórias e áudios de falantes nativos.
+O projeto Texts in English(Textos em inglês) nada mais é do que um lugar para você exercitar o seu Inglês ou até mesmo para aprender caso ainda não saiba.
+
+Cada histórias conta com o auxilio de um áudio gravado por um falante nativos.
 
 São 90 históris com audio e tradução para você ler e ouvir quantas vezes quiser.
 
