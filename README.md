@@ -1,7 +1,9 @@
 <img src="img/favcon.svg" width="50">
 
 <h1>Projeto Texts In English</h1>
-Um lugar para você treinar o seu Inglês com histórias e áudios de nativos ou ate mesmo para aprender caso não saiba.
+O projeto Texts in English(Textos em inglês) nada mais é que um lugar para você exercitar o seu Inglês ou ate mesmo para aprender caso não saiba, com o auxilio de histórias e áudios de falantes nativos.
+
+São 90 históris com audio e tradução para você ler e ouvir quantas vezes quiser.
 
 <h2>Para acessar ou ter mais INFORMAÇÕES clique no link abaixo:</h2>
 <a href="https://jonasjf360.github.io/Texts_in_English/index.html" target="_blank">Lista das Histórias.</a>
