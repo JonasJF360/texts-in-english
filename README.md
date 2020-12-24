@@ -1,4 +1,4 @@
-<img src="img/favcon.svg" align="rigth" width="50"><h2>Texts In English</h2>
+<img src="img/favcon.svg" align="rigth" width="50"> ## Texts In English
 
 <h1>O projeto:</h1>
 O projeto Texts in English(Textos em inglês) nada mais é que um lugar para você exercitar o seu Inglês ou ate mesmo para aprender caso não saiba, com o auxilio de histórias e áudios de falantes nativos.
