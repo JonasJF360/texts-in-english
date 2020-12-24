@@ -8,10 +8,10 @@ O projeto Texts in English(Textos em inglês) nada mais é que um lugar para voc
 São 90 históris com audio e tradução para você ler e ouvir quantas vezes quiser.
 
 <h2>Para acessar ou ter mais INFORMAÇÕES clique no link abaixo:</h2>
-
-* [Lista das Histórias.](https://jonasjf360.github.io/Texts_in_English/index.html)
-
-<a href="https://jonasjf360.github.io/Texts_in_English/info.html" target="_blank">Saber mais sobre o projeto.</a>
+<ul>
+<li><a href="https://jonasjf360.github.io/Texts_in_English/index.html" target="_blank">Lista das Histórias.</a></li>
+<li><a href="https://jonasjf360.github.io/Texts_in_English/info.html" target="_blank">Saber mais sobre o projeto.</a></li>
+</ul>
 
 <h3>Projeto livre:</h3>
 Este é um projeto livre, e se sentir vontade você pode criar uma ramificação ou até mesmo baixar os arquivos para modifica-los por motivo de estudos ou uso próprio.
