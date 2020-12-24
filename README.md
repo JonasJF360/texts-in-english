@@ -1,6 +1,6 @@
 <img src="img/favcon.svg" width="50">
 
-<h1>Projeto Texts In Englis</h1>
+<h1>Projeto Texts In English</h1>
 Um lugar para você treinar o seu Inglês com histórias e áudios de nativos ou ate mesmo para aprender caso não saiba.
 
 ## Para acessar ou ter mais INFORMAÇÕES clique no link abaixo.
