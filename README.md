@@ -1,4 +1,4 @@
-![Ícone TIE - Texts in English](img/favcon.svg "Ícone")
+<img src="img/favcon.svg" align="right" width="50">
 
 # Projeto Texts_in_English
 Um lugar para você treinar o seu Inglês com histórias e áudios de nativos ou ate mesmo para aprender caso não saiba.
