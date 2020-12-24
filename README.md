@@ -1,6 +1,6 @@
 <img src="img/favcon.svg" align="right" width="300">
 
-## Texts In English
+## Texts In English (T.I.E)
 
 <h1>O projeto:</h1>
 O projeto Texts in English(Textos em inglês) nada mais é do que um lugar para você exercitar o seu Inglês ou até mesmo para aprender caso ainda não saiba.
