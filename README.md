@@ -1,4 +1,4 @@
-<img src="img/favcon.svg" align="right" width="240">
+<img src="img/favcon.svg" align="right" width="300">
 
 ## Texts In English
 
