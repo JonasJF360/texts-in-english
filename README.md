@@ -9,6 +9,8 @@ Cada histórias conta com o auxilio de um áudio gravado por um falante nativos.
 
 São 90 históris com audio e tradução para você ler e ouvir quantas vezes quiser.
 
+https://jonasjf360.github.io/texts-in-english/index.html
+
 <h3>Projeto livre:</h3>
 Este é um projeto livre, e se sentir vontade você pode criar uma ramificação ou até mesmo baixar os arquivos para modifica-los por motivo de estudos ou curiosidade.
 
