@@ -191,7 +191,7 @@ ul.historias li{
 	border-radius: 5px;
 	width: 280px;
 	height: 23px;
-    overflow: hidden;
+    	overflow: hidden;
 }
 
 ul.historias li:hover{
@@ -201,7 +201,7 @@ ul.historias li:hover{
 
 ul.info{
 	text-align: center;
-    margin-bottom: 14px;
+    	margin-bottom: 14px;
 }
 ul.info li{
 	display: inline-block;
@@ -219,7 +219,7 @@ ul.info li{
 	border-radius: 5px;
 	width: 280px;
 	height: 23px;
-    overflow: hidden;
+    	overflow: hidden;
 }
 
 ul.info li{
@@ -228,5 +228,5 @@ ul.info li{
 }
 ul.info li:hover{
 	color: black;
-    background-color: #DDD;
+    	background-color: #DDD;
 }
