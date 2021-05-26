@@ -14,8 +14,7 @@ body{
 div#pagina{
 	width: 90%;
 	padding: 1px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 10px auto;
 }
 div.texto{
 	background: #333;
@@ -57,7 +56,7 @@ span{
 div#menu{
 	background: #333;
 	height: 53px;
-	margin: 0 0 10px 0;
+	margin: 0 0 20px 0;
 	border: 1px solid #555;
 	box-shadow: 0 0 3px rgba(200 ,200 ,200 ,.5);
 }
@@ -191,17 +190,43 @@ ul.historias li{
 	border: 1px solid #555;
 	border-radius: 5px;
 	width: 280px;
-	/*height: 60px;*/
+	height: 23px;
+    overflow: hidden;
 }
+
 ul.historias li:hover{
 	color: black;
 	background-color: #DDD;
 }
-li#info{
+
+ul.info{
+	text-align: center;
+    margin-bottom: 14px;
+}
+ul.info li{
+	display: inline-block;
+}
+ul.info li{
+	background: #404040;
+	text-align: left;
+	color: white;
+	padding: 3px;
+	font-family: Calibria, Arial, Calibria;
+	font-weight: bolder;
+	font-size: 15pt;
+	margin: 2px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	width: 280px;
+	height: 23px;
+    overflow: hidden;
+}
+
+ul.info li{
 	color: yellow;
 	text-align: center;
-	margin-bottom: 20px
 }
-li#info:hover{
+ul.info li:hover{
 	color: black;
+    background-color: #DDD;
 }
