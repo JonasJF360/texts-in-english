@@ -1,0 +1,343 @@
+/*** Variáveis padrões ***/
+:root {
+    /*** Cores geral ***/
+    --cor-fundo: #282c34;
+    --cor-containers: #434344;
+    --amarelo: #ffffba;
+    --azul: #84b7e6;
+    --branco: white;
+    --branco-transparente-40: rgba(255, 255, 255, 0.4);
+    --preto: black;
+}
+
+/*** Configurações de reboot e elementos padrões ***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--branco);
+    font-family: Calibria, Arial, Calibria;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+/*** Configurações Padrão ***/
+
+h1 {
+    font-size: 22pt;
+}
+
+h2 {
+    font-size: 18pt;
+}
+
+h3 {
+    font-size: 15pt;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 13pt;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.largura-maxima {
+    max-width: 1200px;
+    min-width: 370px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.conto-arred-container {
+    border-radius: 10px;
+}
+
+.cor-cinza-container {
+    background-color: var(--cor-containers);
+}
+
+/*** Configurações do menu ***/
+header {
+    background-color: var(--cor-containers);
+    padding: 10px;
+}
+
+header div.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 0 10px;
+}
+
+header h1 {
+    text-transform: uppercase;
+}
+
+header h1:hover {
+    text-shadow: var(--branco) 0 0 2px;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    border: 1px solid var(--branco-transparente-40);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    cursor: pointer;
+}
+
+header li:hover {
+    background-color: var(--branco);
+}
+
+header li#anterior {
+    background-image: url(../img/carat-l-white.svg);
+}
+
+header li#anterior:hover {
+    background-image: url(../img/carat-l-black.svg);
+}
+
+header li#todos {
+    background-image: url(../img/bars-white.svg);
+}
+
+header li#todos:hover {
+    background-image: url(../img/bars-black.svg);
+}
+
+header li#proximo {
+    background-image: url(../img/carat-r-white.svg);
+}
+
+header li#proximo:hover {
+    background-image: url(../img/carat-r-black.svg);
+}
+
+/*** Configurações da área de conteúdo da página ***/
+section {
+    min-height: 85vh;
+}
+
+section div.acao-menu {
+    display: none;
+    background-color: var(--cor-containers);
+    margin-top: 10px;
+    height: 200px;
+    padding: 10px;
+    transition: 1.5s;
+}
+
+section div#info {
+    border: 1px solid var(--branco-transparente-40);
+    background-color: var(--branco-transparente-40);
+    border-radius: 5px 0 0 5px;
+    width: 10%;
+    padding: 10px;
+    transition: 1.5s;
+}
+
+section div#lista-historias {
+    border: 1px solid var(--branco-transparente-40);
+    background-color: var(--cor-containers);
+    border-radius: 0 5px 5px 0;
+    width: 90%;
+    padding: 10px;
+    transition: 1.5s;
+}
+
+div#expandir {
+    position: relative;
+    border: 1px solid var(--branco-transparente-40);
+    float: right;
+    margin: 60px -30px 0 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-containers);
+    background-image: url(../img/swap-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+
+div#expandir:hover {
+    background-image: url(../img/swap-black.svg);
+    background-color: var(--branco);
+}
+
+div#conteudo-info {
+    display: none;
+}
+
+div#conteudo-info ul {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: space-around;
+    min-height: 150px;
+    padding-top: 3px;
+    padding-right: 10px;
+}
+
+div#conteuto-historia {
+    height: 160px;
+    padding-left: 20px;
+    overflow: auto;
+    overscroll-behavior-y: contain;
+}
+
+div#conteudo-info li,
+div#conteuto-historia li {
+    text-transform: uppercase;
+    font-size: 15pt;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+div#conteudo-info li:hover,
+div#conteuto-historia li:hover {
+    color: var(--amarelo);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div#conteudo-info li span {
+    font-size: 20pt;
+    color: crimson;
+}
+
+/*** Configurações dos controles ***/
+
+div#player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    height: 65px;
+}
+
+div.controles button {
+    border: 1px solid var(--branco-transparente-40);
+    border-radius: 8px;
+    width: 65px;
+    height: 40px;
+    margin: 6px;
+    background-color: var(--cor-containers);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    cursor: pointer;
+}
+
+div.controles button:hover {
+    background-color: var(--branco);
+}
+
+button#reproduzir {
+    background-image: url(../img/play-white.svg);
+}
+
+button#reproduzir:hover {
+    background-image: url(../img/play-black.svg);
+}
+
+button#pausar {
+    background-image: url(../img/pause-white.svg);
+}
+
+button#pausar:hover {
+    background-image: url(../img/pause-black.svg);
+}
+
+button#diminuir {
+    background-image: url(../img/audio-down-white.svg);
+}
+
+button#diminuir:hover {
+    background-image: url(../img/audio-down-black.svg);
+}
+
+button#aumentar {
+    background-image: url(../img/audio-up-white.svg);
+}
+
+button#aumentar:hover {
+    background-image: url(../img/audio-up-black.svg);
+}
+
+/*** Configurações da área de textos ***/
+div#conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+    padding: 10px;
+}
+
+hr {
+    border-bottom: 1px solid var(--branco-transparente-40);
+    margin-bottom: 10px;
+}
+
+div#conteudo p {
+    text-align: justify;
+    padding: 0 2%;
+}
+
+div#texto,
+div#traducao {
+    min-height: 100px;
+    margin: 10px 0;
+}
+
+div#texto h1,
+div#traducao h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18pt;
+    margin-bottom: 10px;
+}
+
+div#texto p {
+    font-weight: bold;
+    color: var(--azul);
+}
+
+div#traducao p {
+    color: var(--amarelo);
+}
+
+/*** Media Query ***/
+@media (max-width: 500px) {
+
+    div#conteudo-info ul {
+        text-align: left;
+        padding-top: 3px;
+        padding-right: 10px;
+    }
+    div#conteudo-info li,
+div#conteuto-historia li {
+    font-size: 12pt;
+}
+}

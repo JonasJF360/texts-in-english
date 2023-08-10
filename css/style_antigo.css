@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+/* pagina */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: Calibria, Arial, Calibria;
+}
+
+body {
+	background-color: rgb(40, 44, 52);
+}
+
+/*Configurações da página */
+div#pagina {
+	width: 90%;
+	padding: 1px;
+	margin: 0 auto 10px auto;
+}
+
+div.texto {
+	background: #333;
+	margin: 2px 0 5px 0;
+	padding: 20px 10px 20px 10px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	box-shadow: 0 0 3px rgba(200, 200, 200, .5);
+}
+
+div.texto h1 {
+	color: #DDD;
+	text-align: center;
+	font-family: Calibria, Arial, Calibria;
+	font-weight: bolder;
+	font-size: 22pt
+}
+
+div.texto h2 {
+	color: #DDD;
+	text-align: center;
+	font-family: Calibria, Arial, Calibria;
+	font-weight: bold;
+	font-size: 20pt;
+	padding-top: 10px;
+	border-top: 1px solid #777;
+}
+
+div.texto p {
+	color: #8bb2a9;
+	margin: 5px 0 10px 0;
+	text-align: justify;
+	font-family: Arial, Calibria;
+	font-size: 14pt
+}
+
+span {
+	color: #8bc0f1
+		/*Amarelo #bdbd78*/
+	;
+	font-weight: bold;
+}
+
+/* Configuração do menu */
+div#menu {
+	background: #333;
+	height: 53px;
+	margin: 0 0 20px 0;
+	border: 1px solid #555;
+	box-shadow: 0 0 3px rgba(200, 200, 200, .5);
+}
+
+ul.mudar {
+	text-align: center;
+}
+
+header#mudar li {
+	display: inline-block;
+	border: 1px solid #555;
+	border-radius: 5px;
+	width: 40px;
+	height: 40px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+}
+
+ul.mudar li.nomecurso {
+	width: 220px;
+	border: none;
+	color: white;
+	padding-top: 13px;
+	font-family: Calibria, Arial, Calibria;
+	font-weight: bolder;
+	font-size: 18pt;
+}
+
+li.anterior {
+	float: left;
+	margin: 5px auto auto 6%;
+	background-image: url(../img/carat-l-white.svg);
+}
+
+li.anterior:hover {
+	background-image: url(../img/carat-l-black.svg);
+	background-color: #DDD;
+}
+
+li.todos {
+	margin-top: 5px;
+	background-image: url(../img/bars-white.svg);
+}
+
+li.todos:hover {
+	background-image: url(../img/bars-black.svg);
+	background-color: #DDD;
+}
+
+li.proximo {
+	float: right;
+	margin: 5px 6% auto auto;
+	background-image: url(../img/carat-r-white.svg);
+}
+
+li.proximo:hover {
+	background-image: url(../img/carat-r-black.svg);
+	background-color: #DDD;
+}
+
+/*configurações do player*/
+div.player {
+	background: #333;
+	height: 53px;
+	margin: 5px 0 10px 0;
+	padding: 0px 10px 0px 10px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	box-shadow: 0 0 3px rgba(200, 200, 200, .5);
+}
+
+div.controles {
+	text-align: center;
+}
+
+div.controles button {
+	background-color: #333;
+	margin: 7px 1px 0 1px;
+	border: 1px solid #555;
+	width: 70px;
+	height: 40px;
+	border-radius: 5px;
+	display: inline-block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+}
+
+button.reproduzir {
+	background-image: url(../img/play-white.svg);
+}
+
+button.reproduzir:hover {
+	background-image: url(../img/play-black.svg);
+	background-color: #DDD;
+}
+
+button.pausar {
+	background-image: url(../img/pause-white.svg);
+}
+
+button.pausar:hover {
+	background-image: url(../img/pause-black.svg);
+	background-color: #DDD;
+}
+
+button.diminuir {
+	background-image: url(../img/audio-down-white.svg);
+}
+
+button.diminuir:hover {
+	background-image: url(../img/audio-down-black.svg);
+	background-color: #DDD;
+}
+
+button.aumentar {
+	background-image: url(../img/audio-up-white.svg);
+}
+
+button.aumentar:hover {
+	background-image: url(../img/audio-up-black.svg);
+	background-color: #DDD;
+}
+
+/* Configuralçao do index 'SUMÀRIO'*/
+div.fundo-index {
+	background: #333;
+	margin: 5px auto 5px auto;
+	padding: 20px 10px 20px 10px;
+	border: 1px solid #555;
+	border-radius: 10px;
+	box-shadow: 0 0 3px rgba(200, 200, 200, .5);
+}
+
+ul.historias {
+	text-align: center;
+}
+
+ul.historias li {
+	display: inline-block;
+}
+
+ul.historias li {
+	background: #404040;
+	text-align: left;
+	color: white;
+	padding: 3px;
+	font-family: Calibria, Arial, Calibria;
+	font-weight: bolder;
+	font-size: 15pt;
+	margin: 2px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	width: 280px;
+	height: 22px;
+	overflow: hidden;
+}
+
+ul.historias li:hover {
+	color: black;
+	background-color: #DDD;
+}
+
+ul.info {
+	text-align: center;
+	margin-bottom: 14px;
+}
+
+ul.info li {
+	display: inline-block;
+}
+
+ul.info li {
+	background: #404040;
+	text-align: left;
+	color: white;
+	padding: 3px;
+	font-family: Calibria, Arial, Calibria;
+	font-weight: bolder;
+	font-size: 15pt;
+	margin: 2px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	width: 280px;
+	height: 22px;
+	overflow: hidden;
+}
+
+ul.info li {
+	color: yellow;
+	text-align: center;
+}
+
+ul.info li:hover {
+	color: black;
+	background-color: #DDD;
+}
