@@ -20,8 +20,10 @@
 }
 
 body {
+    min-width: 370px;
     min-height: 100vh;
     background-color: var(--cor-fundo);
+    padding-bottom: 15px;
 }
 
 /*** Configurações Padrão ***/
@@ -54,7 +56,6 @@ ul li {
 
 .largura-maxima {
     max-width: 1200px;
-    min-width: 370px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -194,16 +195,20 @@ div#conteudo-info ul {
     flex-direction: column;
     text-align: right;
     justify-content: space-around;
-    min-height: 150px;
+    min-height: 158px;
     padding-top: 3px;
     padding-right: 10px;
 }
 
+div#conteudo-info,
 div#conteuto-historia {
     height: 160px;
-    padding-left: 20px;
     overflow: auto;
     overscroll-behavior-y: contain;
+}
+
+div#conteuto-historia {
+    padding-left: 20px;
 }
 
 div#conteudo-info li,
@@ -336,8 +341,13 @@ div#traducao p {
         padding-top: 3px;
         padding-right: 10px;
     }
+
     div#conteudo-info li,
-div#conteuto-historia li {
-    font-size: 12pt;
-}
+    div#conteuto-historia li {
+        font-size: 12pt;
+    }
+
+    div#conteudo-info li span {
+        font-size: 16pt;
+    }
 }
