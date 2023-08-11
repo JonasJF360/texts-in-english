@@ -20,7 +20,7 @@
 }
 
 body {
-    min-width: 370px;
+    min-width: 360px;
     min-height: 100vh;
     background-color: var(--cor-fundo);
     padding-bottom: 15px;
@@ -82,7 +82,7 @@ header div.menu {
     margin: 0 10px;
 }
 
-header h1 {
+header div.menu h1 {
     text-transform: uppercase;
 }
 
@@ -134,18 +134,75 @@ header li#proximo:hover {
     background-image: url(../img/carat-r-black.svg);
 }
 
+/*** Configuração menu informativo ***/
+div#container-info {
+    z-index: 50;
+    background-color: var(--branco-transparente-40);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+div.texto-info {
+    background-color: var(--cor-fundo);
+    padding: 15px;
+    width: 700px;
+    border-radius: 10px;
+}
+
+div.texto-info h1,
+div.texto-info h2 {
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+div.texto-info h2 {
+    padding-top: 10px;
+}
+
+div.texto-info p {
+    text-align: justify;
+    margin-bottom: 8px;
+}
+
+div.bloco-info {
+    overflow: auto;
+    overscroll-behavior-y: contain;
+    padding: 0 6px;
+    max-height: 500px;
+}
+
+div#fechar-info {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-weight: bolder;
+    border-radius: 5px;
+    background-color: crimson;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 /*** Configurações da área de conteúdo da página ***/
 section {
     min-height: 85vh;
 }
 
-section div.acao-menu {
+section div.menu-conteudo {
     display: none;
     background-color: var(--cor-containers);
     margin-top: 10px;
     height: 200px;
     padding: 10px;
-    transition: 1.5s;
+    transition: display 1.5s ease;
 }
 
 section div#info {
@@ -227,11 +284,6 @@ div#conteuto-historia li:hover {
     cursor: pointer;
 }
 
-div#conteudo-info li span {
-    font-size: 20pt;
-    color: crimson;
-}
-
 /*** Configurações dos controles ***/
 
 div#player {
@@ -275,21 +327,14 @@ button#pausar:hover {
     background-image: url(../img/pause-black.svg);
 }
 
-button#diminuir {
-    background-image: url(../img/audio-down-white.svg);
+button#parar {
+    background-image: url(../img/stop-white.svg);
 }
 
-button#diminuir:hover {
-    background-image: url(../img/audio-down-black.svg);
+button#parar:hover {
+    background-image: url(../img/stop-black.svg);
 }
 
-button#aumentar {
-    background-image: url(../img/audio-up-white.svg);
-}
-
-button#aumentar:hover {
-    background-image: url(../img/audio-up-black.svg);
-}
 
 /*** Configurações da área de textos ***/
 div#conteudo {
@@ -334,7 +379,22 @@ div#traducao p {
 }
 
 /*** Media Query ***/
+@media (max-width: 700px) {
+    div#container-info {
+        display: block;
+    }
+
+    div.texto-info {
+        border-radius: 0px;
+        width: 100%;
+        min-height: 100vh;
+    }
+}
+
 @media (max-width: 500px) {
+    header div.menu h1 {
+        font-size: 18pt;
+    }
 
     div#conteudo-info ul {
         text-align: left;

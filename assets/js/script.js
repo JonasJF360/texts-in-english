@@ -4,10 +4,15 @@
     let textoAtual = 1
     let expandirlista = '10%'
 
+    function criarElemento(elemento) {
+        return document.createElement(elemento)
+    }
+
     const tituloIngles = document.querySelector('h1#titulo')
     const textoIngles = document.querySelector('#texto > p')
     const tituloTraduzido = document.querySelector('h2#titulo')
     const textoTraduzido = document.querySelector('#traducao > p')
+
 
     // Evento que muda o que está amarecendo no menu
     document.querySelector('div#expandir').addEventListener('click', (e) => {
@@ -34,12 +39,15 @@
 
     document.querySelector('li#todos').addEventListener('click', (e) => {
         e.preventDefault()
-        let menu = document.querySelector('div.acao-menu')
-        let estado = !menu.style.display ? 'none' : menu.style.display
-        menu.style.display = estado == 'none' ? 'flex' : 'none'
-
+        abrirFecharMenu()
         listarTextos()
     })
+
+    function abrirFecharMenu() {
+        let menu = document.querySelector('div.menu-conteudo')
+        let estado = !menu.style.display ? 'none' : menu.style.display
+        menu.style.display = estado == 'none' ? 'flex' : 'none'
+    }
 
     function listarTextos() {
         let elUl = criarElemento('ul')
@@ -57,15 +65,14 @@
                     elLi.addEventListener('click', () => {
                         textoAtual = i + 1
                         carregarTexto()
+                        abrirFecharMenu()
                     })
                     elUl.appendChild(elLi)
                 }
             })
     }
 
-    function criarElemento(elemento) {
-        return document.createElement(elemento)
-    }
+    document.querySelector('li#abrir-info').addEventListener('click', abrirInfo)
 
     document.querySelector('#anterior').addEventListener('click', (e) => {
         e.preventDefault()
@@ -91,14 +98,10 @@
         audio.pause()
     })
 
-    document.getElementById("diminuir").addEventListener('click', e => {
+    document.getElementById("parar").addEventListener('click', e => {
         e.preventDefault()
-        audio.volume -= 0.1
-    })
-
-    document.getElementById("aumentar").addEventListener('click', e => {
-        e.preventDefault()
-        audio.volume += 0.1
+        audio.pause()
+        audio.currentTime = 0
     })
 
     function carregarTexto() {
@@ -116,6 +119,41 @@
         textoAtual < 10 ?
             audio.src = `./assets/audios/hs0${textoAtual}.ogg` :
             audio.src = `./assets/audios/hs${textoAtual}.ogg`;
+    }
+
+    function abrirInfo() {
+        let conteudo = `
+            <div class="texto-info">
+                <div id="fechar-info">x</div>
+                <h1>Sobre o Projeto</h2>
+                <div class="bloco-info">
+                    <p><b>01.</b> Está página, <b>Texts in English</b>, foi criada apenas para es exercitar os conhecimentos em  inglês.</p>
+                    <p><b>02.</b> Nenhum texto ou audio presente foi criado por mim ou pertence diretamente, apenas os coloquei em um ambiente de fácil acesso para que se possa aprender bem.</p>
+                    <p><b>03.</b> Está página não tem nenhum fim financairo, e por isso nada será cobrado pelo seu acesso. Caso algué cobre, ou diga que você tem que pagar algo para ter o acesso, essa informação não é verdadeira.</p>
+                    <p><b>04.</b> Não tenho o intuito tornar isso um curso, mas caso queira tratar como fosse um e definir metas para obter um melhor aprendizado, fique a vontade.
+                    </p>
+
+                    <h2>Observações finais</h2>
+
+                    <p>Me chamo Jonas, sou formado em Análise e Desenvolvimento de Sistemas pela Unicesumar, um amante da programação e da tecnologia. Também gosto muito de Inglês e sempre estou à procura de formas faceis e baratas de aprender, e caso seja gratis, melhor ainda.
+                    </p>
+                    <p>Projetei essa página para ser leve, e de certa forma, para que também seja acessíval.
+                    </p>
+                    <p>O intúito é que funcione bem em celulares, tablets e computadores adequadamente.</p>
+                    <p>As cores foram escolhidas vizando um melhor conforto para a visão, mas tambem para que tenha um estilo agradável.</p>
+                    <p>Espero realmente que goste e aproveite ao máximo todos os textos e audios, basta clicar no ícone de menu para ver a lista completa das histórias disponíveis. Bom aprendizado!</p>
+                </div>
+            </div>
+        `
+        let containerInfo = criarElemento('div')
+        containerInfo.id = "container-info"
+        containerInfo.innerHTML = conteudo
+
+        document.querySelector("header").appendChild(containerInfo)
+        document.querySelector('div#fechar-info').addEventListener('click', (e) => {
+            e.preventDefault()
+            document.querySelector('div#container-info').remove()
+        })
     }
 
     function inicarAplicacao() {
