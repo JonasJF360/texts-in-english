@@ -115,10 +115,14 @@
                 textoIngles.innerText = dado.textos[textoAtual - 1].historia
                 tituloTraduzido.innerText = dado.textos[textoAtual - 1].traducao.titulo
                 textoTraduzido.innerText = dado.textos[textoAtual - 1].traducao.historia
+
+                document.title = `Text ${textoAtual.toString().padStart(2, '0')} - ${dado.textos[textoAtual - 1].titulo}`
             })
         textoAtual < 10 ?
             audio.src = `./assets/audios/hs0${textoAtual}.ogg` :
             audio.src = `./assets/audios/hs${textoAtual}.ogg`;
+
+
     }
 
     function abrirInfo() {

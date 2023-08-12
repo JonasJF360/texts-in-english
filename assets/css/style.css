@@ -1,8 +1,9 @@
 /*** Variáveis padrões ***/
 :root {
     /*** Cores geral ***/
-    --cor-fundo: #282c34;
-    --cor-containers: #434344;
+    --cor-fundo: #2c303a;
+    --cor-containers: #394355;
+    /* --cor-containers: #434344; */
     --amarelo: #ffffba;
     --azul: #84b7e6;
     --branco: white;
@@ -64,6 +65,11 @@ ul li {
     border-radius: 10px;
 }
 
+.sombra-branco-transp {
+    box-shadow: 0px .5px 2.5px var(--branco-transparente-40);
+    /* border: 1px solid var(--branco-transparente-40); */
+}
+
 .cor-cinza-container {
     background-color: var(--cor-containers);
 }
@@ -72,6 +78,7 @@ ul li {
 header {
     background-color: var(--cor-containers);
     padding: 10px;
+    border-bottom: 1px solid var(--branco-transparente-40);
 }
 
 header div.menu {
@@ -174,7 +181,7 @@ div.bloco-info {
     overflow: auto;
     overscroll-behavior-y: contain;
     padding: 0 6px;
-    max-height: 500px;
+    max-height: 80vh;
 }
 
 div#fechar-info {
