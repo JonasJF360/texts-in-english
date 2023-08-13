@@ -1,14 +1,13 @@
 (App = () => {
 
-    const audio = document.querySelector('#audio')
     let textoAtual = 1
-
     let expandirlista = '10%'
-
+    
     function criarElemento(elemento) {
         return document.createElement(elemento)
     }
-
+    
+    const audio = document.querySelector('#audio')
     const tituloIngles = document.querySelector('h1#titulo')
     const textoIngles = document.querySelector('#texto > p')
     const tituloTraduzido = document.querySelector('h2#titulo')
@@ -112,8 +111,6 @@
         const dadosSalvos = JSON.parse(localStorage.getItem('AccessTextsInEnglish'))
         dadosSalvos.atual = atual
         dadosSalvos.total = total
-
-        console.log(dadosSalvos.atual, dadosSalvos.total)
 
         const jsonData = JSON.stringify(dadosSalvos)
         localStorage.setItem('AccessTextsInEnglish', jsonData)
