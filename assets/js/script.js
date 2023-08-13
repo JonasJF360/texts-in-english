@@ -2,6 +2,7 @@
 
     const audio = document.querySelector('#audio')
     let textoAtual = 1
+
     let expandirlista = '10%'
 
     function criarElemento(elemento) {
@@ -77,12 +78,15 @@
     document.querySelector('#anterior').addEventListener('click', (e) => {
         e.preventDefault()
         textoAtual -= 1
+        if (textoAtual < 1) textoAtual = parseInt(JSON.parse(localStorage.getItem('AccessTextsInEnglish')).total)
         carregarTexto()
     })
 
     document.querySelector('#proximo').addEventListener('click', (e) => {
         e.preventDefault()
         textoAtual += 1
+        if (textoAtual > parseInt(JSON.parse(localStorage.getItem('AccessTextsInEnglish')).total))
+            textoAtual = 1
         carregarTexto()
     })
 
@@ -104,12 +108,22 @@
         audio.currentTime = 0
     })
 
+    function atualizarDadoLocal(atual, total) {
+        const dadosSalvos = JSON.parse(localStorage.getItem('AccessTextsInEnglish'))
+        dadosSalvos.atual = atual
+        dadosSalvos.total = total
+
+        console.log(dadosSalvos.atual, dadosSalvos.total)
+
+        const jsonData = JSON.stringify(dadosSalvos)
+        localStorage.setItem('AccessTextsInEnglish', jsonData)
+    }
+
     function carregarTexto() {
         fetch('./assets/data/texts.json')
             .then(response => response.json())
             .then(dado => {
-                if (textoAtual < 1) textoAtual = dado.textos.length
-                if (textoAtual > dado.textos.length) textoAtual = 1
+                atualizarDadoLocal(textoAtual, dado.textos.length)
 
                 tituloIngles.innerText = dado.textos[textoAtual - 1].titulo
                 textoIngles.innerText = dado.textos[textoAtual - 1].historia
@@ -118,11 +132,8 @@
 
                 document.title = `Text ${textoAtual.toString().padStart(2, '0')} - ${dado.textos[textoAtual - 1].titulo}`
             })
-        textoAtual < 10 ?
-            audio.src = `./assets/audios/hs0${textoAtual}.ogg` :
-            audio.src = `./assets/audios/hs${textoAtual}.ogg`;
 
-
+        audio.src = `./assets/audios/hs${textoAtual.toString().padStart(2, '0')}.ogg`
     }
 
     function abrirInfo() {
@@ -160,7 +171,21 @@
         })
     }
 
+    function criarBase() {
+        const BaseDados = {
+            total: 0,
+            atual: 0
+        }
+        const jsonData = JSON.stringify(BaseDados)
+        localStorage.setItem('AccessTextsInEnglish', jsonData)
+    }
+
     function inicarAplicacao() {
+        if (!localStorage.AccessTextsInEnglish) {
+            criarBase()
+        } else {
+            textoAtual = parseInt(JSON.parse(localStorage.getItem('AccessTextsInEnglish')).atual)
+        }
         carregarTexto()
     }
 
